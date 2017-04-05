@@ -57,7 +57,10 @@ if %input% == 5 goto e
 
 if %input% == 6 goto f
 
-if not %input% == 1 goto null
+:null
+echo THERE IS NO %input% OPTION!
+timeout /t 3 >null
+goto start
 
 :a
 start Matrix
@@ -90,8 +93,3 @@ goto e
 
 :f
 exit
-
-:null
-echo THERE IS NO %input% OPTION!
-timeout /t 3 >null
-goto start
