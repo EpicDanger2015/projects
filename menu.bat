@@ -26,7 +26,7 @@ echo      8888                8888         88888888888888888   88888888888888888
 echo       88                  88          88888888888888888   88888888888888888      88888888                88888888888        888                      888  8888888888888888888     888
 echo -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 echo Credits To
-echo Joshua Spencer
+echo EpicDanger2015
 echo ===================
 echo Select An Option...
 echo ===================
@@ -57,7 +57,8 @@ if %input% == 5 goto e
 
 if %input% == 6 goto f
 
-if %input% == Joshua goto g
+if not %input% == 1 goto null
+
 :a
 start Matrix
 goto start
@@ -90,7 +91,7 @@ goto e
 :f
 exit
 
-:g
-echo Joshua? OH, I thought his name was Spencer... He's cool, He created me!
-timeout /t 5 >null
+:null
+echo THERE IS NO %input% OPTION!
+timeout /t 3 >null
 goto start
